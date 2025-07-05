@@ -1,0 +1,102 @@
+/* === Intro Component Styling === */
+
+body {
+  background-color: #fdfdfc;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Container */
+.intro-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #fffaf6;
+}
+
+/* Card Styling */
+.intro-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings and Text */
+.intro-card h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 600;
+}
+
+.intro-card h1 span {
+  color: #e2853a; /* Warm orange shade */
+}
+
+.intro-card p {
+  color: #444;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.intro-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 15px;
+}
+
+.intro-card li {
+  margin-bottom: 6px;
+}
+
+/* Button Styling */
+.intro-login-button {
+  background-color: #e2853a;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(226, 133, 58, 0.2);
+}
+
+.intro-login-button:hover {
+  background-color: #cf6e25;
+  transform: translateY(-1px);
+}
+
+.intro-login-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-card {
+    padding: 24px;
+  }
+
+  .intro-card h1 {
+    font-size: 22px;
+  }
+
+  .intro-login-button {
+    width: 100%;
+    font-size: 15px;
+  }
+}

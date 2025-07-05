@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import '../styles/AddHotel.css';
 
 function AddHotel() {
   const [data, setData] = useState({
@@ -29,51 +30,51 @@ function AddHotel() {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: 'auto' }}>
+    <div className="add-hotel-container">
       <h2>Add Hotel</h2>
       <input
+        className="form-input"
         type="text"
         placeholder="Name"
         value={data.name}
         onChange={e => setData({ ...data, name: e.target.value })}
-      /><br />
-
+      />
       <input
+        className="form-input"
         type="text"
         placeholder="City"
         value={data.city}
         onChange={e => setData({ ...data, city: e.target.value })}
-      /><br />
-
+      />
       <input
+        className="form-input"
         type="number"
         placeholder="Price Per Night"
         value={data.pricePerNight}
         onChange={e => setData({ ...data, pricePerNight: e.target.value })}
-      /><br />
-
+      />
       <input
+        className="form-input"
         type="text"
         placeholder="Type (Hotel, Hostel, etc.)"
         value={data.type}
         onChange={e => setData({ ...data, type: e.target.value })}
-      /><br />
-
+      />
       <input
+        className="form-input"
         type="text"
         placeholder="Description"
         value={data.description}
         onChange={e => setData({ ...data, description: e.target.value })}
-      /><br />
-
+      />
       <input
+        className="form-input"
         type="text"
         placeholder="Image URL"
         value={data.imageUrl}
         onChange={e => setData({ ...data, imageUrl: e.target.value })}
-      /><br />
-
-      <button onClick={handleAdd}>Add Hotel</button>
+      />
+      <button className="submit-button" onClick={handleAdd}>Add Hotel</button>
     </div>
   );
 }

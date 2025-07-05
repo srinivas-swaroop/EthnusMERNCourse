@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import '../styles/EditHotel.css'; // Make sure this CSS file exists
 
 function EditHotel() {
   const { id } = useParams(); // get hotel ID from URL
@@ -15,7 +16,6 @@ function EditHotel() {
   });
 
   useEffect(() => {
-    // Fetch hotel by ID
     const fetchHotel = async () => {
       try {
         const res = await axios.get(`http://localhost:5000/api/edit/${id}`);
@@ -42,19 +42,53 @@ function EditHotel() {
       navigate('/'); // redirect after success
     } catch (err) {
       console.error('Update failed:', err);
+      alert(err.response?.data?.error || 'Failed to update hotel');
     }
   };
 
   return (
-    <div>
+    <div className="edit-hotel-container">
       <h2>Edit Hotel</h2>
-      <input name="name" placeholder="Name" value={hotel.name} onChange={handleChange} />
-      <input name="city" placeholder="City" value={hotel.city} onChange={handleChange} />
-      <input name="pricePerNight" placeholder="Price" value={hotel.pricePerNight} onChange={handleChange} />
-      <input name="type" placeholder="Type" value={hotel.type} onChange={handleChange} />
-      <input name="description" placeholder="Description" value={hotel.description} onChange={handleChange} />
-      <input name="imageUrl" placeholder="Image URL" value={hotel.imageUrl} onChange={handleChange} />
-      <button onClick={handleUpdate}>Update Hotel</button>
+      <input
+        name="name"
+        placeholder="Name"
+        value={hotel.name}
+        onChange={handleChange}
+      />
+      <input
+        name="city"
+        placeholder="City"
+        value={hotel.city}
+        onChange={handleChange}
+      />
+      <input
+        name="pricePerNight"
+        placeholder="Price"
+        type="number"
+        value={hotel.pricePerNight}
+        onChange={handleChange}
+      />
+      <input
+        name="type"
+        placeholder="Type"
+        value={hotel.type}
+        onChange={handleChange}
+      />
+      <input
+        name="description"
+        placeholder="Description"
+        value={hotel.description}
+        onChange={handleChange}
+      />
+      <input
+        name="imageUrl"
+        placeholder="Image URL"
+        value={hotel.imageUrl}
+        onChange={handleChange}
+      />
+      <button className="update-button" onClick={handleUpdate}>
+        Update Hotel
+      </button>
     </div>
   );
 }

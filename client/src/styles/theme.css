@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #2563eb;  /* Subtle blue */
+  --secondary-color: #f1f5f9;
+  --accent-color: #10b981;
+
+  --text-color: #1e293b;
+  --background-color: #ffffff;
+  --font-family: 'Segoe UI', 'Inter', sans-serif;
+
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
