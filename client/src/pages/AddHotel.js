@@ -17,7 +17,7 @@ function AddHotel() {
 
   const handleAdd = async () => {
     try {
-      await axios.post('http://localhost:5000/api/hotels', data, {
+      await axios.post('https://ethnusmerncourse-1.onrender.com/api/hotels', data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }

@@ -10,7 +10,7 @@ function Register() {
 
   const handleRegister = async () => {
     try {
-      await axios.post('http://localhost:5000/api/auth/register', form);
+      await axios.post('https://ethnusmerncourse-1.onrender.com/api/auth/register', form);
       navigate('/login');
     } catch (err) {
       setErrMsg(err.response?.data || 'Registration failed');

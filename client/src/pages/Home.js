@@ -16,7 +16,7 @@ function Home() {
 
   const fetchHotels = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/hotels', {
+      const res = await axios.get('https://ethnusmerncourse-1.onrender.com/api/hotels', {
         params: { city, min, max },
       });
       setHotels(res.data);

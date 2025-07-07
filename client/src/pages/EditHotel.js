@@ -34,7 +34,7 @@ function EditHotel() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/edit/${id}`, hotel, {
+      await axios.put(`https://ethnusmerncourse-1.onrender.com/api/edit/${id}`, hotel, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
