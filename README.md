@@ -36,4 +36,15 @@ This is a full-stack Hotel Booking web application built using the **MERN** stac
 ---
 
 ## 📁 Folder Structure
+EthnusMERNCourse/
+├── client/ # React frontend
+│ ├── src/
+│ │ ├── pages/ # Home, Login, Register, AddHotel, EditHotel, Intro
+│ │ └── App.js
+│ └── public/
+├── server/ # Node.js + Express backend
+│ ├── models/ # Mongoose models
+│ ├── routes/ # API routes (auth, hotels, edit)
+│ ├── server.js # Entry point for backend
+└── README.md # This file
 
