@@ -1,1 +1,1 @@
-checking thissssssssssssssssssssssssssssss
+so currently testing how rebase works.... so this is text.txt 
